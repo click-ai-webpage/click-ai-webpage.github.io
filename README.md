@@ -1,1 +1,1 @@
-# FollwYourClick
+# ClickAI
