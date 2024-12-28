@@ -1,0 +1,1504 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Click AI</title>
+<link href="./AnimateDiff_files/style.css" rel="stylesheet">
+<script type="text/javascript" src="./AnimateDiff_files/jquery.mlens-1.0.min.js"></script> 
+<script type="text/javascript" src="./AnimateDiff_files/jquery.js"></script>
+
+<style>
+  p.serif{
+    font-family:"Times New Roman", Times, serif;
+  }
+  p.sansserif{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h3 {
+      text-align: center;
+    }
+
+</style>
+
+  
+</head>
+
+<body>
+<div class="content">
+  <!-- <h1><strong>Click AI:
+Open-domainRegionalImage AnimationviaShortPrompts</strong>&nbsp;&nbsp;<small>(ECCV)</small></h1> -->
+
+<!-- <h1><strong style="font-size: larger;"></strong></h1> -->
+<h1><strong>Click AI: Open-Domain Regional Image Animation Using Brief Prompts</strong>&nbsp;&nbsp;<small></small></h1>
+<p id="authors" class="serif">
+
+</p>
+
+  
+<font size="+1">
+  <p style="text-align: center;" class="serif">
+    <a href="https://arxiv.org" target="_blank" style="font-weight: bold;">[Paper will push to ArXiv soon]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/mayuelala/FollowYourClick" target="_blank" style="font-weight: bold;">[Github Repo]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#bibtex" style="font-weight: bold;">[Twitter(X)]</a><br>
+    <a href="#bibtex" style="font-weight: bold;">[Pump.fun💊]</a>
+  </p><br>
+</font>
+
+<p style="font-size: 1.4em" class="serif">
+  Click AI's vision is to expand the boundaries of memes. We hope to cooperate with pumpfun to turn static memes into dynamic memes for dev use and jointly build meme culture.<br>😊 The code and checkpoints is coming soon！<br>
+</p>
+  <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to play result from Click AI!</p>
+  </font>
+
+
+  <style>
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+
+    
+  
+    .col {
+      flex: 1;
+      text-align: center;
+     
+    }
+
+    .head {
+      flex: 1;
+      text-align: center;
+      
+    }
+
+    h3 {
+      
+      font-size: 15px; /* 缩小标题的大小 */
+      
+    }
+  
+  
+    img, video {
+      width: 100%; /* 将图片和视频的宽度设置为100%，以使它们在同一行上大小相匹配 */
+      height: auto;
+    }
+
+   
+
+  </style>
+  
+  <div class="row">
+    <div class="col">
+      <h3>User Click</h3>
+      <!-- Case 1 Image -->
+      <img class="case-image" src="animations/teaser/1/图片1.jpg" alt="Case 1 Image" style="width: 100%;">
+      
+    </div>
+    <div class="col">
+      <h3>Output</h3>
+      <!-- Case 1 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/1/1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <h3>User Click</h3>
+      <!-- Case 2 Image -->
+      <img class="case-image" src="animations/teaser/8/图片2.jpg" alt="Case 2 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      <h3>Output</h3>
+      <!-- Case 2 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/8/8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <h3>User Click</h3>
+      <!-- Case 3 Image -->
+      <img class="case-image" src="animations/teaser/storm/图片3.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      <h3>Output</h3>
+      <!-- Case 3 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/storm/storm.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Tune the head"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Flap the wings"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Storm"</h3>
+    </div>
+
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      
+      <!-- Case 1 Image -->
+      <img class="case-image" src="animations/teaser/3/图片4.jpg" alt="Case 1 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 1 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/3/3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      
+      <!-- Case 2 Image -->
+      <img class="case-image" src="animations/teaser/cry/图片5.jpg" alt="Case 2 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 2 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/cry/OFC_16.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      
+      <!-- Case 3 Image -->
+      <img class="case-image" src="animations/teaser/2/图片6.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 3 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser//2/2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="head">
+      <h3>"Smile"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Sad"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Launch"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col">
+      
+      <!-- Case 1 Image -->
+      <img class="case-image" src="animations/teaser/7/图片7.jpg" alt="Case 1 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 1 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/7/7.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      
+      <!-- Case 2 Image -->
+      <img class="case-image" src="animations/teaser/5/图片8.jpg" alt="Case 2 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 2 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/5/5.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      
+      <!-- Case 3 Image -->
+      <img class="case-image" src="animations/teaser/6/图片9.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 3 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="animations/teaser/6/6.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="head">
+      <h3>"Drift"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Dancing"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Drive back and forward"</h3>
+    </div>
+
+  </div>
+  
+
+</div>
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Gallery</p>
+  <p style="font-size: 1.4em" class="serif">
+    Here we demonstrate more animation results via our framework.<br>
+  </p>
+  <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to play result from  Click AI!</p>
+  </font>
+  <!-- <img class="summary-img" src="figs/framework.jpg" style="width:100%;"> <br> -->
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e13/1710149385097.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e13/14_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- First Row -->
+    
+
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/2.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    
+
+
+
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/2_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/teaser/2/图片6.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+
+
+
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/launch/launch_back.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    
+
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Fire"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Tune the body"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Launch down"</h3>
+    </div>
+
+  </div>
+  
+  <div class="row">
+
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/4.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Second Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/4_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e11/1710149176181.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e11/12_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    
+
+    
+
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/5/1710218843476.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/5/5.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Driving forward"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Flow"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Tune the body"</h3>
+    </div>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/7.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/7_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/8.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/8_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/9.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/9.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Shake the body"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Dancing"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Running"</h3>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e1/1710129484987.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e1/2_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e2/1710129623239.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e2/3_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e3/1710129558874.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e3/4_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Driving"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Dancing"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Running"</h3>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e4/1710151015682.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e4/case1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e5/1710129770273.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e5/5_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e6/1710129715326.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e6/6_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Angry"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Go forward"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Running"</h3>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e7/1710148783384.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e7/8_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e8/1710149003199.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e8/9_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e9/1710148923431.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e9/10_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Flying"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Tune the body"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"driving back"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e10/1710149080184.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e10/11_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/5.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/5_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e11/1710149176181.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e11/12_part2.mp4" type="video/mp4">
+      </video>
+    </div> -->
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e12/1710149321430.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e12/13_part2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Dancing"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Dancing"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Shake the body"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/1.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/1_part2 (2).mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e13/1710149385097.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e13/14_part2.mp4" type="video/mp4">
+      </video>
+    </div> -->
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/8/1710235718781.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/8/8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/4/1710226403199.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/4/4.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Dancing "</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Ear wiggle"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Angry"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/26/1710218085639.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/26/26.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/15/1710222872835.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/15/15.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/e/e14/1710150530652.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/e/e14/tywt_dw_25.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Drift"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Blink"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Shake the body"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/6.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/6_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/6/1710226454409.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/6/6.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/7/1710219167831.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/7/7.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Sad"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Astonish"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Blink"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/1/1710217876309.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/1/1_.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/9/1710219312851.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop> 
+        <source src="animations/c/9/9.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/2/1710226318490.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/2/2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Driving back"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Storm"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Happy"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/11/1710219568111.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/11/11.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/12/1710226532938.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/12/12.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/13/1710226605292.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/13/13.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Blink"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Raise head"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Swimming"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/14/1710224887936.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/14/14.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/3/1710218696409.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/3/3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/16/1710222940746.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/16/16.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Nod"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Dancing"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Blink"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/17/1710223020938.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/17/17.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/18/1710223197977.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/18/18.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/19/1710223342962.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/19/19.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"Blink"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Close the month"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Shake head"</h3>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/20/1710223514286.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <!-- Third Row -->
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/20/20.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/c/21/1710235377355.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/c/21/8867d205cc522b4ccf2fd9b893544abc.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      
+      <img class="case-image" src="animations/gallery/3.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/gallery/3_part2 (1).mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="head" >
+      <h3 >"The wind is blowing"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Drift"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Walking"</h3>
+    </div>
+
+  </div>
+
+  
+    
+    
+
+  </div>
+
+  
+
+
+  
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Comparisons</p>
+  <p style="font-size: 1.4em" class="serif">
+    Here we demonstrate the animations generated by different methods.<br>
+    We qualitatively compare our approach with the most recent open-sourced state-of-the-art animation methods, 
+    including Animate anything, SVD, Dynamicrafter and I2VGen-XL. We also compare our approach 
+    with commercial tools such as Gen-2, Genmo, and Pika Labs.
+  </p>
+  <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to play the following animations!</p>
+  </font>
+<!--  <span style="color: red; font-weight: bold"></span>-->
+  <!-- <img class="summary-img" src="figs/framework.jpg" style="width:100%;"> <br> -->
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>User Click</h3>
+      <img src="animations/comparison/dog/1710077868670.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Ours</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/ours/ours.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Animate-Anything</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_aa/dog_aa.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Dynamicrafter</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_dynamicrafter/dog_dynamicrafter.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Genmo</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_genmo/dog_genmo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3> </h3>
+      <img src="animations/blank.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Gen-2</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_gen/dog_gen.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>I2VGen-XL</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_i2v/dog_i2v.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>PikaLabs</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_pika/dog_pika.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>SVD</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/dog/dog_svd/dog_svd.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <hr style="margin: 30px 0;">
+
+
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>User Click</h3>
+      <img src="animations/comparison/man/1710077751304.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Ours</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/ours/ours.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Animate-Anything</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_aa/man_aa.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Dynamicrafter</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_dynamicrafter/man_dynamicrafter.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Genmo</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_genmo/man_genmo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3> </h3>
+      <img src="animations/blank.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Gen-2</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_gen/man_gen.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>I2VGen-XL</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_i2v/man_i2v.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>PikaLabs</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_pika/man_pika.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>SVD</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/comparison/man/man_svd/man_svd.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Motion Strength Control</p>
+  <p style="font-size: 1.4em" class="serif">
+    Here we demonstrate the comparisons between our optical flow motion magnitude control (OFM) and FPS-based motion magnitude control (FPS).
+  </p>
+  <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to play the following animations!</p>
+  </font>
+<!--  <span style="color: red; font-weight: bold">Click to play result from  Click AI!</span>-->
+  <!-- <img class="summary-img" src="figs/framework.jpg" style="width:100%;"> <br> -->
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>User Click</h3>
+      <img src="animations/ablation_motion_cry/1710077144819.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=4</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/FPS_4/FPS_4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=8</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/FPS_8/FPS_8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=12</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/FPS_12/FPS_12.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=16</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/FPS_16/FPS_16.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3> </h3>
+      <img src="animations/blank.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=4</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/OFC_4/OFC_4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=8</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/OFC_8/OFC_8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=12</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/OFC_12/OFC_12.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=16</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion_cry/OFC_16/OFC_16.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+  <hr style="margin: 30px 0;">
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>User Click</h3>
+      <img src="animations/ablation_motion/1710077417089.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=4</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/FPS_4/FPS_4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=8</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/FPS_8/FPS_8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=12</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/FPS_12/FPS_12.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>FPS=16</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/FPS_16/FPS_16.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3> </h3>
+      <img src="animations/blank.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=4</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/OFC_4/OFC_4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=8</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/OFC_8/OFC_8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=12</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/OFC_12/OFC_12.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>OFC=16</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/ablation_motion/OFC_16/OFC_16.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Ablation Study</p>
+  <p style="font-size: 1.4em" class="serif">
+    Here we demonstrate the  qualitative results of ablation the constructed short prompt dataset
+    (D) and motion-augmented module (M). The motion prompt is “running”.
+  </p>
+  <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to play the following animations!</p>
+  </font>
+<!--  <span style="color: red; font-weight: bold">Click to play result from  Click AI!</span>-->
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>User Click</h3>
+      <img src="animations/dog_running/图片.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>W/o D+M</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/dog_running/wo_d_m/wo_d_m.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>W/o D</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/dog_running/wo_d/wo_d.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>W/o M</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/dog_running/wo_m2/wo_m2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Ours</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/dog_running/ours/ours.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>User Click</h3>
+      <img src="animations/bird_fly/1710076971895.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>W/o D+M</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/bird_fly/wo_m2/wo_m2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>W/o D</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/bird_fly/wo_d_m/wo_d_m.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>W/o M</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/bird_fly/wo_d/wo_d.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery" style="width: 16.6%;">
+      <h3>Ours</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/bird_fly/ours/ours.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- <img class="summary-img" src="figs/framework.jpg" style="width:100%;"> <br> -->
+</div>
+
+
+
+
+<!-- </div>
+
+<div class="content" id="bibtex">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">BibTeX</p>
+  <code> @misc{guo16.623animatediff,<br>
+  &nbsp;&nbsp;title={AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning},<br>
+  &nbsp;&nbsp;author={Yuwei Guo and Ceyuan Yang and Anyi Rao and Zhengyang Liang and Yaohui Wang and Yu Qiao and Maneesh Agrawala and Dahua Lin and Bo Dai},<br>
+  &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2307.04716.6},<br>
+  &nbsp;&nbsp;year={16.623},<br>
+  &nbsp;&nbsp;archivePrefix={arXiv},<br>
+  &nbsp;&nbsp;primaryClass={cs.CV}<br>
+  } </code> 
+</div> -->
+
+<div class="content">
+  <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Limitation</p>
+  <p style="font-size: 1.4em" class="serif">
+    Our approach is limited in generating large and complex human motions,
+    as shown in the video.This maybe due to the complexity of the action and the rareness of related training samples.
+  </p>
+<!--  <span style="color: red; font-weight: bold">Click to play the following animations.</span>-->
+  <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to play the following animations!</p>
+  </font>
+  <div class="row">
+    <div class="col-gallery" style="width: 20%;">
+      <h3>User Click</h3>
+      <img src="animations/limitation/图片.jpg" style="width: 100%;">
+    </div>
+    <div class="col-gallery" style="width: 20%;">
+      <h3>Output</h3>
+      <video class="clickplay" width="100%" autoplay loop>
+        <source src="animations/limitation/limitation.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div> 
+</div>   
+
+
+
+
+
+
+<div class="content">
+  <p class="serif">
+    Project page template is borrowed from <a href="https://dreambooth.github.io/">DreamBooth</a>.
+  </p>
+</div>
+
+</body>
+
+<script>
+var videos = document.getElementsByClassName("clickplay");
+for (var i = 0; i < videos.length; i++) {
+  videos[i].addEventListener("click", function() {
+    this.play();
+  });
+  videos[i].addEventListener("ended", function() {
+    this.pause();
+    this.currentTime = 0;
+  });
+}
+</script>
+
+</html>
